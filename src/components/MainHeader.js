@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+import classes from './MainHeader.module.css';
 
 const MainHeader = () => {
     return (
-        <header>
+        <header className={classes.header}>
             <nav>
                 <ul>
                     <li>
-                        <Link to='/welcome'>Welcome</Link>
+                        <NavLink activeClassName={classes.active} to='/welcome'>Welcome</NavLink>
                     </li>
                     <li>
-                        <Link to='/products'>Products</Link>
+                        <NavLink activeClassName={classes.active} to='/products'>Products</NavLink>
                     </li>
                 </ul>
             </nav>
@@ -25,4 +27,8 @@ export default MainHeader;
 is used to create links like a href= (Link to='/welcome')
 
 Link is a component
+*/
+
+/*
+NavLink component is work same like as Link component but it also holds the active class css, that's why we use NavLink component instead of Link component
 */

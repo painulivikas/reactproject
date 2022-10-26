@@ -2,6 +2,7 @@ import { Route } from 'react-router-dom';
 
 import Welcome from './pages/Welcome';
 import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 import MainHeader from './components/MainHeader';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
         <Route path="/products">
           <Products />
         </Route>
+        <Route path="/product-detail/:productId">
+          <ProductDetail />
+        </Route>
       </main>
     </div>
   );
@@ -24,3 +28,4 @@ export default App;
 
 // our-domain.com/welcome => Component A
 // our-domain.com/products => Component B
+// our-domain.com/product-detail/a-book (thats why we give product id in route)
